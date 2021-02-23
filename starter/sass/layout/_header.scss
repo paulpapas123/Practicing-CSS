@@ -1,0 +1,51 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+         rgba($color-primary-light,0.8),
+         rgba($color-primary-dark, 0.8)), 
+         url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 80%,0 100%); 
+    /*
+    Imagine you are drawing a square from 0 0 
+    first point on the right would be 100% 0
+    Second Point on the bottom right would be 100% 100%
+    Under the first point would be 0 100%
+    Edit these values to chop off parts of the website
+    bennettfeely.com/clippy to get the clip of a polygon
+    */
+
+    &__logo-box{
+        position: absolute ;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo{
+        height: 35px;
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    
+        /*
+        Top and left are related to parent element
+        transform relates to child element itself
+        Transform translate moves an element relative to its 
+        original position based on the width and height of the
+        child element.
+        */
+    }
+    
+    
+}
+
+
+
